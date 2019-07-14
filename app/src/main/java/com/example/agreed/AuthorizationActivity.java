@@ -35,6 +35,7 @@ public class AuthorizationActivity extends Activity {
     final String OAUTH_CLIENT_ID = "704683976153-74oarg5o4j88a48enl5qts5gqo5h912b.apps.googleusercontent.com";
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     View.OnClickListener onClickListener = new View.OnClickListener()
     {
@@ -57,6 +58,8 @@ public class AuthorizationActivity extends Activity {
     Intent intentMainActivity = new Intent(AuthorizationActivity.this, MainActivity.class);
 
 >>>>>>> 9a90b7a... last commit
+=======
+>>>>>>> c25da92... Initial commit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +77,7 @@ public class AuthorizationActivity extends Activity {
         facebookButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
 <<<<<<< HEAD
+<<<<<<< HEAD
             public void onSuccess(LoginResult loginResult) {
                 // App code
 =======
@@ -82,6 +86,10 @@ public class AuthorizationActivity extends Activity {
                 // вход с помощью Facebook успешен
                 startActivity(intentMainActivity);
 >>>>>>> 9a90b7a... last commit
+=======
+            public void onSuccess(LoginResult loginResult) {
+                // App code
+>>>>>>> c25da92... Initial commit
             }
 
             @Override
@@ -112,7 +120,11 @@ public class AuthorizationActivity extends Activity {
 
         /* настройка кнопки входа с помощью Google */
         SignInButton googleButton = findViewById(R.id.google_button);
+<<<<<<< HEAD
         // googleButton.setSize(SignInButton.SIZE_STANDARD); // установка размера
+=======
+        googleButton.setSize(SignInButton.SIZE_STANDARD); // установка размера
+>>>>>>> c25da92... Initial commit
         googleButton.setOnClickListener(new View.OnClickListener() // установка слушателя для кнопки Google
         {
             @Override
@@ -138,6 +150,7 @@ public class AuthorizationActivity extends Activity {
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         updateUI(account);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
         /* Facebook */
@@ -150,6 +163,8 @@ public class AuthorizationActivity extends Activity {
             startActivity(intentMainActivity);
         }
 >>>>>>> 9a90b7a... last commit
+=======
+>>>>>>> c25da92... Initial commit
     }
 
     @Override
@@ -199,12 +214,15 @@ public class AuthorizationActivity extends Activity {
         else {
             // если вход с помощью Google успешен
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
             startActivity(intentMainActivity);
         } else {
             // если вход с помощью Google не успешен
             setContentView(R.layout.activity_autorization);
 >>>>>>> 9a90b7a... last commit
+=======
+>>>>>>> c25da92... Initial commit
         }
     }
 }
