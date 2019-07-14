@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--резервное копирование выполняется для всех файлов-->
+    <include domain="file" path="."/>
+    <include domain="database" path="."/>
+    <include domain="sharedpref" path="."/>
+    <include domain="external" path="."/>
+    <include domain="root" path="."/>
+
+    <!--<exclude domain="file" path="instant-run"/>-->
+    <!--исключить также файлы с данными учетной записи и большие файлы-->
+    <!--https://developer.android.com/guide/topics/data/autobackup#IncludingFiles-->
+</full-backup-content>

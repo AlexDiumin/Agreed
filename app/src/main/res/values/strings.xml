@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Agreed!</string>
+
+    <string name="text_login">Вход</string>
+    <string name="text_login_with">с помощью</string>
+    <string name="description_facebook">Facebook</string>
+    <string name="description_google">Google+</string>
+    <string name="description_vk">ВКонтакте</string>
+    <string name="description_twitter">Twitter</string>
+
+    <string name="btn_login">Войти</string>
+
+    <!--для входа с помощью Facebook-->
+    <string name="facebook_app_id">489987871544080</string>
+    <string name="fb_login_protocol_scheme">fb489987871544080</string>
+</resources>
