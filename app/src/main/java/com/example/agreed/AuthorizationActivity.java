@@ -82,7 +82,7 @@ public class AuthorizationActivity extends Activity {
 
         /* настройка кнопки входа с помощью Google */
         SignInButton googleButton = findViewById(R.id.google_button);
-        googleButton.setSize(SignInButton.SIZE_STANDARD); // установка размера
+        // googleButton.setSize(SignInButton.SIZE_STANDARD); // установка размера
         googleButton.setOnClickListener(new View.OnClickListener() // установка слушателя для кнопки Google
         {
             @Override
