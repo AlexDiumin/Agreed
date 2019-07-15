@@ -34,6 +34,29 @@ public class AuthorizationActivity extends Activity {
     final String TAG = "SIGN_IN_WITH_GOOGLE";
     final String OAUTH_CLIENT_ID = "704683976153-74oarg5o4j88a48enl5qts5gqo5h912b.apps.googleusercontent.com";
 
+<<<<<<< HEAD
+=======
+    View.OnClickListener onClickListener = new View.OnClickListener()
+    {
+        @Override
+        public void onClick(View view)
+        {
+            switch (view.getId())
+            {
+                case R.id.google_button:
+                    signInWithGoogle();
+                    break;
+                case R.id.facebook_button: // ???
+                    LoginManager.getInstance().logInWithReadPermissions(AuthorizationActivity.this, Collections.singletonList("public_profile"));
+                    break;
+            }
+        }
+    };
+
+    // переход в MainActivity
+    Intent intentMainActivity = new Intent(AuthorizationActivity.this, MainActivity.class);
+
+>>>>>>> 9a90b7a... last commit
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,8 +73,15 @@ public class AuthorizationActivity extends Activity {
         // Callback registration
         facebookButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
+<<<<<<< HEAD
             public void onSuccess(LoginResult loginResult) {
                 // App code
+=======
+            public void onSuccess(LoginResult loginResult)
+            {
+                // вход с помощью Facebook успешен
+                startActivity(intentMainActivity);
+>>>>>>> 9a90b7a... last commit
             }
 
             @Override
@@ -107,6 +137,19 @@ public class AuthorizationActivity extends Activity {
         // проверка выполнял ли пользователь вход ранее
         GoogleSignInAccount account = GoogleSignIn.getLastSignedInAccount(this);
         updateUI(account);
+<<<<<<< HEAD
+=======
+
+        /* Facebook */
+        // проверка статуса входа (facebook)
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        boolean isLoggedIn = accessToken != null && !accessToken.isExpired();
+        if (isLoggedIn)
+        {
+            // вход с помощью Facebook был произведен
+            startActivity(intentMainActivity);
+        }
+>>>>>>> 9a90b7a... last commit
     }
 
     @Override
@@ -155,6 +198,13 @@ public class AuthorizationActivity extends Activity {
         }
         else {
             // если вход с помощью Google успешен
+<<<<<<< HEAD
+=======
+            startActivity(intentMainActivity);
+        } else {
+            // если вход с помощью Google не успешен
+            setContentView(R.layout.activity_autorization);
+>>>>>>> 9a90b7a... last commit
         }
     }
 }
